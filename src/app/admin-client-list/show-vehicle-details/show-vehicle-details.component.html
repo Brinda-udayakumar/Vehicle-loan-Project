@@ -1,0 +1,21 @@
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Car Make</th>
+            <th>Car Model</th>
+            <th>Ex-Showroom Price</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of VehicleList">
+            <td>{{dataItem.CustomerId}}</td>
+            <td>{{dataItem.CarMake}}</td>
+            <td>{{dataItem.CarModel}}</td>
+            <td>{{dataItem.ExShowroomPrice}}</td>
+          
+
+        </tr>
+    </tbody>
+</table>

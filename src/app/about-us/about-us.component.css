@@ -1,0 +1,16 @@
+.content
+{
+    margin: 50px 50px;
+    border: 1px solid lightblue;
+    background-color: antiquewhite;
+    text-align: center;
+}
+h1 {
+    width:1100px;
+  
+    text-align: center;
+}
+.card{
+    margin: 30px 20px;
+    border: 1px solid lightblue;
+  }

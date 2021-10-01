@@ -1,0 +1,25 @@
+.stylelogin{
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    vertical-align:middle;
+    border: 1px solid blueviolet;
+    
+}
+p{
+    height: 45px;
+}
+.styleinnercard{
+    text-align: center;
+   vertical-align: bottom;
+    height: 250px;
+}
+
+.myclass
+{
+    width: 100px;
+    height: 100px;
+}

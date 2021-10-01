@@ -1,0 +1,25 @@
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Type Of Employment</th>
+            <th>Annual Salary</th>
+           
+            <th>Existing EMI</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of EmpList">
+            <td>{{dataItem.CustomerId}}</td>
+            <td>{{dataItem.TypeOfEmployment}}</td>
+            <td>{{dataItem.AnnualSalary}}</td>
+            <td>{{dataItem.ExistingEMI}}</td>
+          
+          
+
+        </tr>
+    </tbody>
+</table>
+
+

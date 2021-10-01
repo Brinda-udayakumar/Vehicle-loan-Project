@@ -1,0 +1,32 @@
+<p class ="emptyptag">
+
+</p>
+<mat-card style="text-align:center; border: 1px solid blueviolet;" class="stylelogin">
+    <div class = "tp-container">
+      <mat-card-title>ADMIN LOGIN</mat-card-title><br>
+      <mat-form-field appearance = "outline">
+        <mat-label>User Name</mat-label>
+         <input [(ngModel)]='username'  matInput placeholder = "Enter User Name">
+      </mat-form-field><br>
+      <mat-form-field appearance = "outline">
+        <mat-label>Password</mat-label>
+        <input [(ngModel)]='password'  matInput placeholder = "Enter Password">
+      </mat-form-field><br>
+    
+      <div>
+        <button mat-flat-button class="buttonstyle" (click)="adminValidation()">Submit</button>
+      </div>
+      
+    </div>
+    <br>
+    <div>
+    <p class="alert alert-failure" *ngIf="result==0">
+        <mat-card class="errorstyle">
+        <strong>Invalid User name and Password!</strong>
+    </mat-card>
+    </p>
+</div>  
+    </mat-card>
+
+    
+    

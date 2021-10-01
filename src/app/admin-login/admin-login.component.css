@@ -1,0 +1,27 @@
+.buttonstyle{
+    border: 1px solid grey;
+  }
+  
+  .tp-container{
+    width:400px;
+    align-items:center;
+  }
+  .stylelogin{
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    vertical-align:middle;
+    border: 1px solid blueviolet;
+    
+}
+p{
+    height: 45px;
+}
+.errorstyle
+{
+    background-color: tomato;
+}
+

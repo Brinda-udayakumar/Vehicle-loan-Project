@@ -1,0 +1,43 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    Admin Dashboard
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+  
+        <h4 class="name">Dashboard</h4>
+  
+        <mat-divider></mat-divider>
+        <a mat-button  class="menu-button" [routerLink]="['/','AdminClientList']" routerLinkActive="active">Clients</a><br>
+        <a mat-button  class="menu-button" [routerLink]="['/','AdminForApprovalList']" routerLinkActive="active">Applications</a><br>
+        <a mat-button  class="menu-button" [routerLink]="['/','AdminApprovedList']" routerLinkActive="active">Approved List</a><br>
+        <a mat-button  class="menu-button" [routerLink]="['/','AdminRejectedList']" routerLinkActive="active">Rejected List</a><br>
+        
+   
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+  
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-card>
+            <div style="width: 1000px;height: 350px;">
+            <img mat-card-image src="assets/images/Mercedes_Benz_GLS.jpg" alt="Own Your Dream Ride">
+        </div>
+    </mat-card>
+        
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+ 

@@ -1,0 +1,25 @@
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Loan Amount</th>
+            <th>Loan Tenure</th>
+            <th>Rate Of Interest</th>
+            <th>Loan Status</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of LoanApprovedList">
+            <td>{{dataItem.CustomerId}}</td>
+            <td>{{dataItem.LoanAmount}}</td>
+            <td>{{dataItem.LoanTenure}}</td>
+            <td>{{dataItem.RateOfInterest}}</td>
+            <td>{{dataItem.LoanStatus}}</td>
+          
+
+        </tr>
+    </tbody>
+</table>
+
+
