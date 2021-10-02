@@ -34,4 +34,7 @@ export class SharedService {
   getLoanForApprovalDetailsList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/LoanForApprovalDetails');
   }
+  updateLoanStatus(val:any){
+    return this.http.put(this.APIUrl+'/LoanForApprovalDetails',val);
+  }
 }

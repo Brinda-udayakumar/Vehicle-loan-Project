@@ -17,6 +17,11 @@
             <td>{{dataItem.RateOfInterest}}</td>
             <td>{{dataItem.LoanStatus}}</td>
           
+            <td>
+                <a  mat-raised-button color="success" (click)="Approve(dataItem.CustomerId)" >Approve</a> 
+              
+                <a mat-raised-button color="warn" (click)="Reject(dataItem.CustomerId)">Reject</a> 
+            </td>
 
         </tr>
     </tbody>
