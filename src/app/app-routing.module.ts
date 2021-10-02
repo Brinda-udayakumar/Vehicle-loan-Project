@@ -14,8 +14,9 @@ import { ShowPersonalDetailsComponent } from './admin-client-list/show-personal-
 import { ShowVehicleDetailsComponent } from './admin-client-list/show-vehicle-details/show-vehicle-details.component';
 import { ShowLoanDetailsComponent } from './admin-client-list/show-loan-details/show-loan-details.component';
 import { ShowEmpDetailsComponent } from './admin-client-list/show-emp-details/show-emp-details.component';
-
-
+import { GetEligibleComponent } from './get-eligible/get-eligible.component';
+import { LoanOffersComponent } from './loan-offers/loan-offers.component';
+import { CompleteApplicationFormComponent } from './complete-application-form/complete-application-form.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -31,8 +32,10 @@ const routes: Routes = [
   {path:'ShowPersonalDetails',component:ShowPersonalDetailsComponent},
   {path:'ShowVehicleDetails',component: ShowVehicleDetailsComponent},
   {path:'ShowLoanDetails',component:ShowLoanDetailsComponent },
-  {path:'ShowEmpDetails',component:ShowEmpDetailsComponent}
-
+  {path:'ShowEmpDetails',component:ShowEmpDetailsComponent},
+  {path:'GetEligible',component:GetEligibleComponent},
+  {path:'LoanOffers',component:LoanOffersComponent},
+  {path:'ApplicationForm',component:CompleteApplicationFormComponent}
  
  
 ];

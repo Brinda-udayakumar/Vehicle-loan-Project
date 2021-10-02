@@ -37,4 +37,22 @@ export class SharedService {
   updateLoanStatus(val:any){
     return this.http.put(this.APIUrl+'/LoanForApprovalDetails',val);
   }
+
+  addPersonalDetails(val:any){
+    return this.http.post(this.APIUrl+'/PersonalDetails',val);
+  }
+  addLoanDetails(val:any){
+    return this.http.post(this.APIUrl+'/LoanDetails',val);
+  }
+  addEmpDetails(val:any){
+    return this.http.post(this.APIUrl+'/EmploymentDetails',val);
+  }
+  addVehicleDetails(val:any){
+    return this.http.post(this.APIUrl+'/VehicleDetails',val);
+  }
+  addLoginDetails(val:any){
+    return this.http.post(this.APIUrl+'/LoginDetails',val);
+  }
+
 }
+

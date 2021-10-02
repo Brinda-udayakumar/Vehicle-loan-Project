@@ -21,6 +21,7 @@ import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.componen
 
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { LoginComponent } from './login/login.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
@@ -41,7 +42,12 @@ import { ShowPersonalDetailsComponent } from './admin-client-list/show-personal-
 import { ShowVehicleDetailsComponent } from './admin-client-list/show-vehicle-details/show-vehicle-details.component';
 import { ShowLoanDetailsComponent } from './admin-client-list/show-loan-details/show-loan-details.component';
 import { ShowEmpDetailsComponent } from './admin-client-list/show-emp-details/show-emp-details.component';
-
+import { GetEligibleComponent } from './get-eligible/get-eligible.component';
+import { LoanOffersComponent } from './loan-offers/loan-offers.component';
+import { CompleteApplicationFormComponent } from './complete-application-form/complete-application-form.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatListModule} from '@angular/material/list';
 
 
 
@@ -64,6 +70,9 @@ import { ShowEmpDetailsComponent } from './admin-client-list/show-emp-details/sh
     ShowVehicleDetailsComponent,
     ShowLoanDetailsComponent,
     ShowEmpDetailsComponent,
+    GetEligibleComponent,
+    LoanOffersComponent,
+    CompleteApplicationFormComponent,
     
    
   ],
@@ -80,7 +89,7 @@ import { ShowEmpDetailsComponent } from './admin-client-list/show-emp-details/sh
     MatFormFieldModule,
     MatInputModule,
     FormsModule,ReactiveFormsModule,MatMenuModule,MatSliderModule,MatSidenavModule,MatDividerModule,
-    HttpClientModule,MatTabsModule
+    HttpClientModule,MatTabsModule,MatStepperModule,MatRadioModule,MatListModule
 
 
    
