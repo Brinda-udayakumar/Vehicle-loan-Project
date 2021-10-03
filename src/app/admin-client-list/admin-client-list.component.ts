@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminClientListComponent implements OnInit {
 
+  page: string = "personalDetails";
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  togglePage = (pageName: string) =>{
+    this.page = pageName;
   }
 
 }

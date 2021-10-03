@@ -1,0 +1,39 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    User Dashboard
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+  
+        <h4 class="name">Dashboard</h4>
+        
+        <mat-divider></mat-divider>
+        <a mat-button  class="menu-button" [routerLink]="['/','UserDetailsList']" routerLinkActive="active">Loan Details</a><br>
+        
+        <mat-divider></mat-divider>
+        <a mat-button  class="menu-button" [routerLink]="['/','UserPersonaldetails']" routerLinkActive="active">Profile Details</a><br>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+  
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-card>
+            <div style="width: 100%;height: 350px;">
+            <img mat-card-image src="assets/images/car1.jpg" alt="Own Your Dream Ride">
+        </div>
+    </mat-card>
+        
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+ 

@@ -18,7 +18,7 @@ export class CompleteApplicationFormComponent implements OnInit {
   
     hide = true;
     isEditable=false;
-    isLinear=false;
+    isLinear=true;
     PersonalDetails:FormGroup ;
     FirstName:string='';
     Age:number=0;
@@ -59,7 +59,7 @@ export class CompleteApplicationFormComponent implements OnInit {
         console.log(this.data);
       });
       this.lamount=this.data.Amount;
-      this.lyear=this.data.Year;
+      this.lyear=this.data.Months;
       this.linterest=this.data.Interest;
   
       this.PersonalDetails=this.fb.group({
@@ -151,9 +151,9 @@ export class CompleteApplicationFormComponent implements OnInit {
     LoanDetailsSubmit(){
       var LoanObject={
         CustomerId:0,
-        LoanAmount:this.LoanDetails.get('loanAmount')?.value,
-        LoanTenure:this.LoanDetails.get('loanTenure')?.value,
-        RateOfInterest:this.LoanDetails.get('rateofInterest')?.value,
+       LoanAmount:this.lamount,
+       LoanTenure:this.lyear,
+       RateOfInterest:this.linterest,
         LoanStatus:"For Approval"
       };
       this.service.addLoanDetails(LoanObject).subscribe(

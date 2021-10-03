@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class SharedService {
 
-  readonly APIUrl="http://localhost:5000/api";
+  readonly APIUrl="http://localhost:6132/api";
 
   constructor(private http:HttpClient) { }
 
@@ -54,5 +54,14 @@ export class SharedService {
     return this.http.post(this.APIUrl+'/LoginDetails',val);
   }
 
+  LoginCredetials(val:any){
+    return this.http.post(this.APIUrl+'/UserLogin/UserLogin',val);
+  }
+  getUserLoanDetailsList(id:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/UserLoanDetails/'+id);
+  }
+  getUserPersonalDetailsList(id:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/UserPersonalDetails/'+id);
+  }
 }
 

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./get-eligible.component.css']
 })
 export class GetEligibleComponent implements OnInit {
+  alert:boolean=false;
   Name:string='';
   Age:number=0;
   Gender:string='';
@@ -18,9 +19,10 @@ export class GetEligibleComponent implements OnInit {
   Email:string='';
   AckMsg:string='';
   Result:string='';
+  EmploymentType=['Salaried Individual','Self-Employed Individual and Professional (Sole Proprietorship)','Self-Employed Individual and Professional (Patnership Firms)','Self-Employed Individual and Professional (Private Limited Companies)','Self-Employed Individual and Professional (Public Limited Companies)'];
 
   constructor(private _router : Router) { }
-
+  public result:any;
   ngOnInit(): void {
   }
   onFormSubmit(){
@@ -36,10 +38,25 @@ export class GetEligibleComponent implements OnInit {
       Email:this.Email.trim()
 
     }
-    
-    if(DetailsObject.Age>23 && DetailsObject.YearSalary>=300000){
-      this._router.navigateByUrl('/LoanOffers');
+    this.result=0;
+    if(this.TypeOfEmployement==="Salaried Individual" || this.TypeOfEmployement==="Self-Employed Individual and Professional (Sole Proprietorship)"){
+      if(this.YearSalary>=300000 && this.Age>=21){
+        this.result=1;
+        this._router.navigateByUrl('/LoanOffers');
+      }
     }
+    else if(this.TypeOfEmployement==="Self-Employed Individual and Professional (Public Limited Companies)" || this.TypeOfEmployement==="Self-Employed Individual and Professional (Partnership Firms)" || this.TypeOfEmployement==="Self-Employed Individual and Professional (Public Limited Companies)"){
+      if(this.YearSalary>=300000){
+        this.result=1;
+        this._router.navigateByUrl('/LoanOffers');
+      }
+    }
+   
+  }
+  
+  }
 
-  }
-  }
+
+
+
+

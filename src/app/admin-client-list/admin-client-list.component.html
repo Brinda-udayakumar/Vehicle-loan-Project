@@ -4,23 +4,48 @@
     <nav class="navbar navbar-expand-sm bg-light navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <button [routerLink]="['/','ShowPersonalDetails']" routerLinkActive="active"
-                class="m-1 btn btn-light btn-outline-primary" Button>Personal Details</button>
+                <!-- <button [routerLink]="['/','ShowPersonalDetails']" routerLinkActive="active"
+                class="m-1 btn btn-light btn-outline-primary" Button>Personal Details</button> -->
+                <button (click) ="togglePage('personalDetails')"
+                class='m-1 btn btn-light btn-outline-primary' Button>
+                    Personal Details
+                </button>
             </li>
             <li class="nav-item">
-                <button [routerLink]="['/','ShowEmpDetails']" routerLinkActive="active"
-                class="m-1 btn btn-light btn-outline-primary" Button>Employment Details</button>
+                <button (click) ="togglePage('EmploymentDetails')"
+                class='m-1 btn btn-light btn-outline-primary' Button>
+                    Employment Details
+                </button>
             </li>
             <li class="nav-item">
-                <button [routerLink]="['/','ShowVehicleDetails']" routerLinkActive="active"
-                class="m-1 btn btn-light btn-outline-primary" Button>Vehicle Details</button>
+                <button (click) ="togglePage('VehicleDetails')"
+                class='m-1 btn btn-light btn-outline-primary' Button>
+                    Vehicle Details
+                </button>
             </li>
             <li class="nav-item">
-                <button [routerLink]="['/','ShowLoanDetails']" routerLinkActive="active"
-                class="m-1 btn btn-light btn-outline-primary" Button>Loan Details</button>
+                <button (click) ="togglePage('LoanDetails')"
+                class='m-1 btn btn-light btn-outline-primary' Button>
+                    Loan Details
+                </button>
             </li>
         </ul>
     </nav>
 </div>
 
+<div *ngIf="page == 'personalDetails'">
+    <app-show-personal-details></app-show-personal-details>
+</div>
+<div *ngIf="page == 'EmploymentDetails'">
+    <app-show-emp-details></app-show-emp-details>
+</div>
+<div *ngIf="page == 'VehicleDetails'">
+    <app-show-vehicle-details></app-show-vehicle-details>
+</div>
+<div *ngIf="page == 'LoanDetails'">
+    <app-show-loan-details></app-show-loan-details>
+</div>
+<!-- <div *ngIf='page == ShowEmpDetails'>
+    <app-show-emp-details></app-show-emp-details>
+</div> -->
 

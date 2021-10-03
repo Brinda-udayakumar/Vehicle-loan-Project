@@ -48,6 +48,12 @@ import { CompleteApplicationFormComponent } from './complete-application-form/co
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatListModule} from '@angular/material/list';
+import { CommonComponent } from './common/common.component';
+import { GlobalConstantsComponent } from './common/global-constants/global-constants.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserPersonaldetailsComponent } from './user-personaldetails/user-personaldetails.component';
 
 
 
@@ -73,6 +79,12 @@ import {MatListModule} from '@angular/material/list';
     GetEligibleComponent,
     LoanOffersComponent,
     CompleteApplicationFormComponent,
+    CommonComponent,
+    GlobalConstantsComponent,
+    UserLoginComponent,
+    UserDashboardComponent,
+    UserDetailsComponent,
+    UserPersonaldetailsComponent,
     
    
   ],

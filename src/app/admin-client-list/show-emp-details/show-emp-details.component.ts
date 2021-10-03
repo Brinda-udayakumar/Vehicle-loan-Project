@@ -20,6 +20,7 @@ export class ShowEmpDetailsComponent implements OnInit {
     this.service.getEmpDetailsList().subscribe(data=>{
       this.EmpList=data;
     });
+    
   }
 
 

@@ -49,9 +49,11 @@
               </select>
              </div><br>
     
-            <div class="form-group col-12">
-              <label>Type Of Employement</label>
-              <input type="text" ngModel class="form-control" name="typeOfEmployment" [(ngModel)]="TypeOfEmployement" placeholder="Enter Type Of Employement" required>
+             <div class="form-group">
+              <label for="EmploymentType">Type Of Employment</label>
+              <select class="form-control" ngModel id="EmploymentType" name="typeOfEmployment" [(ngModel)]="TypeOfEmployement" required>
+                <option *ngFor="let pow of EmploymentType" [value]="pow">{{pow}}</option>
+              </select>
             </div><br>
             <div class="form-group col-12">
               <label>Yearly Salary</label>
@@ -59,7 +61,11 @@
             </div><br>
             <div class="form-group col-12">
               <label>Existing EMI</label>
-              <input type="number" ngModel class="form-control" name="ExistingEMI" [(ngModel)]="ExistingEMI" placeholder="Enter Existing EMI" required>
+              <!--input type="number" ngModel class="form-control" name="ExistingEMI" [(ngModel)]="ExistingEMI" placeholder="Enter Existing EMI" required-->
+              <select type="number" ngModel class="form-control" name="ExistingEMI" [(ngModel)]="ExistingEMI" placeholder="Enter Existing EMI" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
             </div><br>
             <div class="form-group col-12">
               <label>Mobile No.</label>
@@ -77,16 +83,13 @@
           </div>
         </form>
     
-          <div>
-            <label>{{AckMsg}}</label>
-            
-            </div>
-            <!--h2>Your data:</!--h2>
-            <div>Name: {{userData.Name}}</div>
-            <div>Age: {{userData.Age}}</div>
-            <div>Email: {{userData.Email}}</div>
-            <div>Email: {{userData.Mobile}}</div>
-          </div-->
+        
+
+        <p class="alert alert-failure" *ngIf="result==0">
+          <mat-card class="errorstyle">
+          <strong>Sorry. You are not eligible to apply loan! Kindly Check the eligibility criteria mentioned in the home page.</strong>
+      </mat-card>
+      </p>
     
       </div>
     </div>

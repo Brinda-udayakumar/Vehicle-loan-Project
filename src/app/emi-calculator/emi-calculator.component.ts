@@ -13,10 +13,11 @@ export class EmiCalculatorComponent implements OnInit {
   public result:any;
 
   emiCalc(){
-    let uphalf= Math.pow((1+this.interest),this.tenure);
-    let downhalf = Math.pow((1+this.interest),this.tenure) - 1;
+    let newInterest=this.interest/(12*100);
+    let uphalf= Math.pow((1+newInterest),this.tenure);
+    let downhalf = Math.pow((1+newInterest),this.tenure) - 1;
     let div= uphalf/downhalf;
-    this.result = this.amount * this.interest * div;
+    this.result = Math.round(this.amount * newInterest * div);
   }
 
   constructor() { }

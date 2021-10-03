@@ -17,6 +17,11 @@ import { ShowEmpDetailsComponent } from './admin-client-list/show-emp-details/sh
 import { GetEligibleComponent } from './get-eligible/get-eligible.component';
 import { LoanOffersComponent } from './loan-offers/loan-offers.component';
 import { CompleteApplicationFormComponent } from './complete-application-form/complete-application-form.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import {UserPersonaldetailsComponent} from './user-personaldetails/user-personaldetails.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -35,8 +40,11 @@ const routes: Routes = [
   {path:'ShowEmpDetails',component:ShowEmpDetailsComponent},
   {path:'GetEligible',component:GetEligibleComponent},
   {path:'LoanOffers',component:LoanOffersComponent},
-  {path:'ApplicationForm',component:CompleteApplicationFormComponent}
- 
+  {path:'ApplicationForm',component:CompleteApplicationFormComponent},
+  {path:'UserLogin',component:UserLoginComponent},
+  {path:'UserDashboard',component:UserDashboardComponent},
+  {path:'UserDetailsList',component: UserDetailsComponent},
+  {path:'UserPersonaldetails',component:UserPersonaldetailsComponent}
  
 ];
 

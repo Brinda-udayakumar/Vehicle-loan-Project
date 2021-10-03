@@ -10,7 +10,7 @@ export class LoanOffersComponent implements OnInit {
 
   
   Amount=100000;
-  Year=1;
+  Months=6;
   Interest=8;
   EMI=0;
   disp:boolean=false;
@@ -24,7 +24,7 @@ export class LoanOffersComponent implements OnInit {
     console.log(event);
   }
   onChangeYear(event:any){
-    this.Year=event.value;
+    this.Months=event.value;
     console.log(event);
   }
   onChangeInterest(event:any){
@@ -32,16 +32,18 @@ export class LoanOffersComponent implements OnInit {
     console.log(event);
   }
   OnSubmit(){
-    let uphalf= Math.pow((1+this.Interest),this.Year);
-    let downhalf = Math.pow((1+this.Interest),this.Year) - 1;
+
+    let newInterest=this.Interest/(12*100);
+    let uphalf= Math.pow((1+newInterest),this.Months);
+    let downhalf = Math.pow((1+newInterest),this.Months) - 1;
     let div= uphalf/downhalf;
-    this.EMI = this.Amount * this.Interest * div;
+    this.EMI = Math.round(this.Amount * newInterest * div);
     this.disp=true;
   }
   RedirectPage(){
     let data:any={
       Amount:this.Amount,
-      Year:this.Year,
+      Months:this.Months,
       Interest:this.Interest
     }
     console.log(data);
