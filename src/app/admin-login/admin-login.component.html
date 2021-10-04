@@ -1,20 +1,24 @@
 <p class ="emptyptag">
 
 </p>
-<mat-card style="text-align:center; border: 1px solid blueviolet;" class="stylelogin">
+<mat-card  style="text-align:center; border: 1px solid blueviolet;" class="stylelogin">
     <div class = "tp-container">
       <mat-card-title>ADMIN LOGIN</mat-card-title><br>
-      <mat-form-field appearance = "outline">
+      <mat-form-field appearance = "outline" >
         <mat-label>User Name</mat-label>
-         <input [(ngModel)]='username'  matInput placeholder = "Enter User Name">
+         <input [(ngModel)]='username'  matInput placeholder = "Enter User Name" required>
       </mat-form-field><br>
       <mat-form-field appearance = "outline">
         <mat-label>Password</mat-label>
-        <input [(ngModel)]='password'  matInput placeholder = "Enter Password">
+        <!--input [(ngModel)]='password' type="password"  matInput placeholder = "Enter Password"-->
+        <input matInput placeholder = "Enter Password" [type]="hide ? 'password' : 'text'" [(ngModel)]='password'  required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
       </mat-form-field><br>
     
       <div>
-        <button mat-flat-button class="buttonstyle" (click)="adminValidation()">Submit</button>
+        <button mat-flat-button class="buttonstyle" (click)="adminValidation()">Login</button>
       </div>
       
     </div>

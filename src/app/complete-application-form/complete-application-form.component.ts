@@ -12,13 +12,13 @@ export class CompleteApplicationFormComponent implements OnInit {
 
   data:any;
   lamount:number=0;
-  lyear:number=0;
+  lmonths:number=0;
   linterest:number=0;
   
   
     hide = true;
     isEditable=false;
-    isLinear=true;
+    isLinear=false;
     PersonalDetails:FormGroup ;
     FirstName:string='';
     Age:number=0;
@@ -59,7 +59,7 @@ export class CompleteApplicationFormComponent implements OnInit {
         console.log(this.data);
       });
       this.lamount=this.data.Amount;
-      this.lyear=this.data.Months;
+      this.lmonths=this.data.Months;
       this.linterest=this.data.Interest;
   
       this.PersonalDetails=this.fb.group({
@@ -87,7 +87,7 @@ export class CompleteApplicationFormComponent implements OnInit {
       this.LoanDetails=this.fb.group({
   
         loanAmount:this.lamount,
-        loanTenure:this.lyear,
+        loanTenure:this.lmonths,
         rateofInterest:this.linterest
       });
     
@@ -152,7 +152,7 @@ export class CompleteApplicationFormComponent implements OnInit {
       var LoanObject={
         CustomerId:0,
        LoanAmount:this.lamount,
-       LoanTenure:this.lyear,
+       LoanTenure:this.lmonths,
        RateOfInterest:this.linterest,
         LoanStatus:"For Approval"
       };

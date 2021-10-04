@@ -17,6 +17,7 @@ export class UserLoginComponent implements OnInit {
   public username:string;
   public password:string;
   n:any; 
+  hide=true;
   
   
   

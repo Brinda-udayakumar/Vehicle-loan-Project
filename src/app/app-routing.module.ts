@@ -21,6 +21,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import {UserPersonaldetailsComponent} from './user-personaldetails/user-personaldetails.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 const routes: Routes = [
@@ -44,7 +45,8 @@ const routes: Routes = [
   {path:'UserLogin',component:UserLoginComponent},
   {path:'UserDashboard',component:UserDashboardComponent},
   {path:'UserDetailsList',component: UserDetailsComponent},
-  {path:'UserPersonaldetails',component:UserPersonaldetailsComponent}
+  {path:'UserPersonaldetails',component:UserPersonaldetailsComponent},
+  {path:'fileupload',component:FileUploadComponent}
  
 ];
 

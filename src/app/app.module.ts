@@ -54,6 +54,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserPersonaldetailsComponent } from './user-personaldetails/user-personaldetails.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 
@@ -85,6 +86,7 @@ import { UserPersonaldetailsComponent } from './user-personaldetails/user-person
     UserDashboardComponent,
     UserDetailsComponent,
     UserPersonaldetailsComponent,
+    FileUploadComponent,
     
    
   ],

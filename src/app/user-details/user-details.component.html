@@ -1,26 +1,35 @@
-<table class="table table-stripped">
-    <thead>
-        <tr>
-            <th>Customer ID</th>
-            <th>Loan Amount</th>
-            <th>Loan Tenure</th>
-            <th>Rate Of Interest</th>
-            <th>Loan Status</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let dataItem of UserLoanDetailsList">
-            <td>{{dataItem.CustomerId}}</td>
-            <td>{{dataItem.LoanAmount}}</td>
-            <td>{{dataItem.LoanTenure}}</td>
-            <td>{{dataItem.RateOfInterest}}</td>
-            <td>{{dataItem.LoanStatus}}</td>
-          
+<div  style="padding-top: 50px;">
+    
+    <h1 style="text-align: center;">LOAN DETAILS</h1>
 
-        </tr>
+</div>
+<div>
+<mat-card style="border: 1px solid blueviolet;">
+
+<table class="table table-stripped">
+    <tbody *ngFor="let dataItem of UserLoanDetailsList">
+        
+           <tr><b><td>Customer ID</td></b>
+            <td>{{dataItem.CustomerId}}</td></tr>
+            
+        <tr>
+        <b><td>Loan Amount</td></b>
+            <td>{{dataItem.LoanAmount}}</td></tr>
+
+        <tr>
+        <b><td>Rate Of Interest</td></b>
+            <td>{{dataItem.LoanTenure}}</td></tr>
+            
+        <tr>
+        <b><td>Loan Status</td></b>
+            <td>{{dataItem.LoanStatus}}</td></tr>
+
+       
+
+        
+       
     </tbody>
 </table>
 
-
-
+</mat-card>
+</div>

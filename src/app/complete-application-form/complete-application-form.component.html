@@ -132,7 +132,7 @@
       <mat-list role="list">
         <mat-list-item role="listitem">Your Loan Amount: ₹{{lamount}}</mat-list-item>
         <mat-list-item role="listitem">Your Loan Interest: {{linterest}} percent</mat-list-item>
-        <mat-list-item role="listitem">Your Loan Tenure: {{lyear}} months</mat-list-item>
+        <mat-list-item role="listitem">Your Loan Tenure: {{lmonths}} months</mat-list-item>
       </mat-list><br>
       <div>
         <button mat-button matStepperPrevious>Previous</button>
@@ -170,6 +170,7 @@
     <mat-step>
       <ng-template matStepLabel>Thank You</ng-template>
       <p>Submitted Successfully!</p>
+      <button mat-button [routerLink]="['/','fileupload']" >Next</button>
     </mat-step>
   </mat-vertical-stepper>
   

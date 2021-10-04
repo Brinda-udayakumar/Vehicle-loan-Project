@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+
+    <div class="card-body">
+      <div class="container-fluid">
+        <h3>Aadhar card</h3>
+    <form [formGroup]="fileForm" (ngSubmit)="aadharCardUpload()">
+      <div class="form-group">
+        <input type="file" class="form-control" (change)="handleFileInput($event)" name="file">
+      </div><br>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+      </div>
+    </div>
+
+    <div class="card-body">
+        <div class="container-fluid">
+          <h3>Pan card</h3>
+      <form [formGroup]="fileForm" (ngSubmit)="panCardUpload()">
+        <div class="form-group">
+          <input type="file" class="form-control" (change)="handleFileInput($event)" name="file">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="container-fluid">
+          <h3>Photo</h3>
+      <form [formGroup]="fileForm" (ngSubmit)="photoUpload()">
+        <div class="form-group">
+          <input type="file" class="form-control" (change)="handleFileInput($event)" name="file">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="container-fluid">
+          <h3>Six Months Salary Slip</h3>
+      <form [formGroup]="fileForm" (ngSubmit)="salarySlipUpload()">
+        <div class="form-group">
+          <input type="file" class="form-control" (change)="handleFileInput($event)" name="file">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [routerLink]="['/','UserLogin']">Go to Login</button>
+
+  </div>

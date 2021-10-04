@@ -11,7 +11,7 @@ export class AdminLoginComponent implements OnInit {
   public username:any;
   public password:any;
   public result:any;
-  
+  hide = true;
 
 
   adminValidation(){
